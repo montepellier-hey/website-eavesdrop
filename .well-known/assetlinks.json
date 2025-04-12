@@ -1,9 +1,26 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.eavesdrop.eavesdrop",
-
-    "sha256_cert_fingerprints": ["58:48:93:22:57:F9:5D:C5:2B:3D:7F:1E:48:43:36:92:18:69:32:FC:F1:60:7E:34:48:A9:B8:4C:DB:57:7F:6D"]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.eavesdrop.eavesdrop",
+      "sha256_cert_fingerprints": [
+        "58:48:93:22:57:F9:5D:C5:2B:3D:7F:1E:48:43:36:92:18:69:32:FC:F1:60:7E:34:48:A9:B8:4C:DB:57:7F:6D"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.eavesdrop.eavesdrop",
+      "sha256_cert_fingerprints": [
+        "31:51:A3:84:F2:54:B3:BB:FA:75:F7:FF:25:76:9A:02:70:F7:A7:56:44:D1:F0:96:9B:68:3F:32:7E:8E:B9:18"
+      ]
+    }
   }
-}]
+]
