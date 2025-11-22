@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 • eavesdrop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #b3e16e;
+            --background-color: #012222;
+            --footer-background: #011a1a;
+            --footer-text: #365f5e;
+        }
+
+        body {
+            font-family: "Work Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--primary-color);
+            text-align: center;
+            text-transform: lowercase;
+        }
+
+        .container {
+            padding: 100px 20px;
+        }
+
+        .logo {
+            width: 70px;
+            margin-bottom: 30px;
+            opacity: 0.85;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 6px;
+            font-size: 18px;
+            text-transform: lowercase;
+        }
+
+        a.button:hover {
+            background: var(--primary-color);
+            color: var(--background-color);
+        }
+
+        .footer {
+            margin-top: 100px;
+            padding: 20px;
+            background: var(--footer-background);
+            font-size: 14px;
+        }
+
+        .footer p {
+            color: var(--footer-text);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/eavesdrop-64397.firebasestorage.app/o/htmlImages%2FlogoNoBackground.png?alt=media&token=45d4fd0c-be7b-451f-8582-28843ce55aaa"
+                 alt="eavesdrop logo" class="logo">
+        </a>
+
+        <h1>404: not found</h1>
+        <p>looks like the page you’re listening for doesn’t exist. try heading back home.</p>
+
+        <a href="index.html" class="button">go home</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 eavesdrop. all rights reserved.</p>
+    </div>
+
+</body>
+</html>
