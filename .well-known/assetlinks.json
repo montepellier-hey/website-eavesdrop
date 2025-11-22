@@ -1,13 +1,15 @@
 [
   {
     "relation": [
-      "delegate_permission/common.handle_all_urls"
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
     ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.eavesdrop.eavesdrop",
       "sha256_cert_fingerprints": [
-        "58:48:93:22:57:F9:5D:C5:2B:3D:7F:1E:48:43:36:92:18:69:32:FC:F1:60:7E:34:48:A9:B8:4C:DB:57:7F:6D"
+        "58:48:93:22:57:F9:5D:C5:2B:3D:7F:1E:48:43:36:92:18:69:32:FC:F1:60:7E:34:48:A9:B8:4C:DB:57:7F:6D",
+        "4A:C7:D3:D9:1F:CA:29:45:A8:2A:5E:A2:65:FF:04:F4:D5:63:87:E8:A0:4D:70:AA:3B:6D:07:36:B9:34:87:03"
       ]
     }
   },
