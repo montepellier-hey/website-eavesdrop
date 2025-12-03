@@ -5,7 +5,8 @@
       {
         "appID": "2L3PARUJWB.com.eavesdrop.eavesdrop.eavesdropSwift",
         "paths": [
-          "/v1/*"
+          "/v1/users",
+          "/v1/sursounding"
         ]
       }
     ]
