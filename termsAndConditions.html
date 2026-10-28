@@ -9,111 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #b3e16e;
-            --background-color: #012222;
-            --footer-background: #011a1a;
-            --footer-text: #365f5e;
-            --main-text: #ffffff;
-            --button-color: #011a1a;
-        }
-        body {
-            font-family: "Work Sans", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #012222;
-            color: var(--primary-color);
-            text-transform: lowercase;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-        }
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 50px;
-        }
-        header h1 {
-            font-size: 48px;
-            font-weight: normal;
-            text-transform: lowercase;
-        }
-        .terms-content {
-            text-align: left;
-            padding: 20px;
-        }
-        .terms-content h2 {
-            font-weight: normal;
-            font-size: 24px;
-            margin-top: 40px;
-        }
-        .terms-content h3 {
-            font-weight: normal;
-            font-size: 20px;
-            margin-top: 20px;
-        }
-        .terms-content ul {
-            color: var(--main-text);
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .terms-content p {
-            color: var(--main-text);
-            margin-bottom: 15px;
-        }
-        .table-of-contents {
-            background: rgba(1, 26, 26, 0.7);
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-        .table-of-contents ol {
-            padding-left: 20px;
-        }
-        .footer {
-            background: var(--footer-background);
-            padding: 20px;
-            font-size: 14px;
-            font-weight: normal;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .footer p {
-            color: var(--footer-text);
-        }
-        .footer a {
-            color: var(--footer-text);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: normal;
-        }
-        .social-icons {
-            margin-top: 20px;
-        }
-        .social-icons img {
-            width: 30px;
-            margin: 0 10px;
-        }
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+    <!-- Tailwind via CDN, shared colors and font in resources/tailwind-config.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="resources/tailwind-config.js"></script>
+
+    <style type="text/tailwindcss">
+        header { @apply px-5 pb-8 pt-28 text-center; }
+        header h1 { @apply bg-gradient-to-r from-accent to-emerald-300 bg-clip-text pb-2 text-4xl font-medium tracking-tight text-transparent sm:text-6xl; }
+        .logo { @apply hidden; }
+        .container { @apply mx-auto max-w-3xl px-5 pb-20; }
+        .terms-content { @apply text-left; }
+        .terms-content h2 { @apply mb-3 mt-14 scroll-mt-24 text-2xl font-normal text-accent; }
+        .terms-content h3 { @apply mb-2 mt-8 text-lg font-medium text-accent; }
+        .terms-content p { @apply mb-4 leading-7 text-mist; }
+        .terms-content ul { @apply mb-4 list-disc space-y-2 pl-6 text-mist; }
+        .terms-content a { @apply text-accent underline-offset-4 hover:underline; }
+        .table-of-contents { @apply mb-10; }
+        .table-of-contents h2 { @apply mt-0; }
+        .table-of-contents ol { @apply list-decimal space-y-1 pl-6; }
     </style>
 </head>
-<body>
+<body class="flex min-h-screen flex-col bg-ink font-sans text-accent lowercase antialiased">
+    <script src="resources/nav.js"></script>
+
     <header>
         <a href="index.html">
         <img src="https://firebasestorage.googleapis.com/v0/b/eavesdrop-64397.firebasestorage.app/o/htmlImages%2FlogoNoBackground.png?alt=media&token=499b0899-d4f7-452d-acab-b3b29bf3a99d" alt="eavesdrop Logo" class="logo">
@@ -390,14 +308,6 @@ We cannot guarantee the Services will be available at all times. We may experien
         </div>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2025 eavesdrop. all rights reserved.</p>
-        <a href="termsAndConditions.html">terms of service</a> |
-        <a href="privacy.html">privacy policy</a>
-        <div class="social-icons">
-            <a href="https://x.com/team_eavesdrop"><img src="resources/x.png" alt="X"></a>
-            <a href="https://tiktok.com/eavesdrop"><img src="resources/tiktok.png" alt="tikTok"></a>
-        </div>
-    </div>
+    <script src="resources/footer.js"></script>
 </body>
 </html>

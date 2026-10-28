@@ -7,95 +7,26 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #b3e16e;
-            --background-color: #012222;
-            --footer-background: #011a1a;
-            --footer-text: #365f5e;
-        }
-
-        body {
-            font-family: "Work Sans", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--background-color);
-            color: var(--primary-color);
-            text-align: center;
-            text-transform: lowercase;
-        }
-
-        .container {
-            padding: 100px 20px;
-        }
-
-        .logo {
-            width: 70px;
-            margin-bottom: 30px;
-            opacity: 0.85;
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: normal;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 20px;
-            font-weight: 300;
-            max-width: 500px;
-            margin: 0 auto 40px;
-        }
-
-        a.button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            text-decoration: none;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            border-radius: 6px;
-            font-size: 18px;
-            text-transform: lowercase;
-        }
-
-        a.button:hover {
-            background: var(--primary-color);
-            color: var(--background-color);
-        }
-
-        .footer {
-            margin-top: 100px;
-            padding: 20px;
-            background: var(--footer-background);
-            font-size: 14px;
-        }
-
-        .footer p {
-            color: var(--footer-text);
-        }
-    </style>
+    <!-- Tailwind via CDN, shared colors and font in resources/tailwind-config.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="resources/tailwind-config.js"></script>
 </head>
-<body>
+<body class="flex min-h-screen flex-col bg-ink font-sans text-mist lowercase antialiased">
+    <script src="resources/nav.js"></script>
 
-    <div class="container">
-        <a href="index.html">
-            <img src="https://firebasestorage.googleapis.com/v0/b/eavesdrop-64397.firebasestorage.app/o/htmlImages%2FlogoNoBackground.png?alt=media&token=499b0899-d4f7-452d-acab-b3b29bf3a99d"
-                 alt="eavesdrop logo" class="logo">
-        </a>
+    <main class="flex flex-1 items-center justify-center px-6 pt-20">
+        <section class="animate-fade-up mx-auto max-w-2xl py-24 text-center">
+            <img src="https://firebasestorage.googleapis.com/v0/b/eavesdrop-64397.firebasestorage.app/o/htmlImages%2FlogoNoBackground.png?alt=media&token=499b0899-d4f7-452d-acab-b3b29bf3a99d" alt="eavesdrop logo" class="mx-auto h-14 w-14 drop-shadow-[0_0_24px_rgba(179,225,110,0.45)]">
 
-        <h1>404: not found</h1>
-        <p>looks like the page you’re listening for doesn’t exist. try heading back home.</p>
+            <h1 class="mt-10 bg-gradient-to-r from-accent to-emerald-300 bg-clip-text pb-2 text-5xl font-medium tracking-tight text-transparent sm:text-7xl">404: not found</h1>
+            <p class="mx-auto mt-6 max-w-md text-lg text-mist sm:text-xl">looks like the page you’re listening for doesn’t exist.</p>
 
-        <a href="index.html" class="button">go home</a>
-    </div>
+            <a href="index.html" class="mt-10 inline-block rounded-full bg-accent px-7 py-3.5 text-lg font-medium text-ink transition duration-300 hover:-translate-y-0.5 hover:shadow-glow">go home</a>
+        </section>
+    </main>
 
-    <div class="footer">
-        <p>&copy; 2025 eavesdrop. all rights reserved.</p>
-    </div>
-
+    <script src="resources/footer.js"></script>
 </body>
 </html>

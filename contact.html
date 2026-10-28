@@ -7,88 +7,31 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #b3e16e;
-            --background-color: #012222;
-            --footer-background: #011a1a;
-            --footer-text: #365f5e;
-        }
-        body {
-            font-family: "Work Sans", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--background-color);
-            color: var(--primary-color);
-            text-align: center;
-            text-transform: lowercase;
-        }
-        .header {
-            padding: 60px 20px 20px;
-        }
-        .header a img {
-            width: 50px;
-        }
-        h1 {
-            font-weight: normal;
-            font-size: 36px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 18px;
-            max-width: 600px;
-            margin: 10px auto;
-            line-height: 1.6;
-        }
-        .email {
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 20px;
-            color: var(--primary-color);
-            text-decoration: none;
-            border-bottom: 1px solid var(--primary-color);
-            padding-bottom: 4px;
-        }
-        .footer {
-            background: var(--footer-background);
-            padding: 20px;
-            font-size: 14px;
-            font-weight: normal;
-            margin-top: 60px;
-        }
-        .footer a {
-            color: var(--footer-text);
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer p {
-            color: var(--footer-text);
-            margin: 0;
-        }
-    </style>
+    <!-- Tailwind via CDN, shared colors and font in resources/tailwind-config.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="resources/tailwind-config.js"></script>
 </head>
-<body>
+<body class="flex min-h-screen flex-col bg-ink font-sans text-white lowercase antialiased">
+    <script src="resources/nav.js"></script>
 
-    <div class="header">
-        <a href="index.html">
-            <img src="https://firebasestorage.googleapis.com/v0/b/eavesdrop-64397.firebasestorage.app/o/htmlImages%2FlogoNoBackground.png?alt=media&token=499b0899-d4f7-452d-acab-b3b29bf3a99d" alt="eavesdrop logo">
-        </a>
-        <h1>contact us</h1>
-        <p>we’re here to help. if you have questions, concerns, or feedback, feel free to reach out anytime.</p>
+    <main class="flex-1 pt-20">
+        <!-- No box: everything sits directly on the page -->
+        <section class="mx-auto max-w-2xl px-6 py-24 text-center sm:py-32">
+            <h1 class="animate-fade-up bg-gradient-to-r from-accent to-emerald-300 bg-clip-text pb-2 text-4xl font-medium tracking-tight text-transparent sm:text-6xl">contact us</h1>
 
-        <a class="email" href="mailto:eavesdrop.customer.service@gmail.com">
-            eavesdrop.customer.service@gmail.com
-        </a>
-    </div>
+            <div class="animate-fade-up mt-10 [animation-delay:150ms]">
+                <p class="text-lg leading-8 text-mist">we’re here to help. if you have questions, concerns, or feedback, feel free to reach out anytime.</p>
+                <p class="mt-4 text-lg leading-8 text-mist">all song of the day requests will be ignored.</p>
 
-    <div class="footer">
-        <a href="termsAndConditions.html">terms of service</a> |
-        <a href="privacy.html">privacy policy</a> |
-        <a href="contact.html">contact us</a>
-        <p>&copy; 2025 eavesdrop. all rights reserved.</p>
-    </div>
+                <a href="mailto:eavesdrop.customer.service@gmail.com" class="mt-10 inline-block break-all rounded-full bg-accent px-7 py-3.5 text-base font-medium text-ink transition duration-300 hover:-translate-y-0.5 hover:shadow-glow sm:text-lg">
+                    eavesdrop.customer.service@gmail.com
+                </a>
+            </div>
+        </section>
+    </main>
 
+    <script src="resources/footer.js"></script>
 </body>
 </html>

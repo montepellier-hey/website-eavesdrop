@@ -9,139 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary-color: #b3e16e;
-            --background-color: #012222;
-            --footer-background: #011a1a;
-            --footer-text: #365f5e;
-            --main-text: #ffffff;
-            --button-color: #011a1a;
-        }
-        body {
-            font-family: "Work Sans", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #012222;
-            color: var(--primary-color);
-            text-transform: lowercase;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-        }
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 50px;
-        }
-        header h1 {
-            font-size: 48px;
-            font-weight: normal;
-            text-transform: lowercase;
-        }
-        .privacy-content {
-            text-align: left;
-            padding: 20px;
-        }
-        .privacy-content h2 {
-            font-weight: normal;
-            font-size: 24px;
-            margin-top: 40px;
-        }
-        .privacy-content h3 {
-            font-weight: normal;
-            font-size: 20px;
-            margin-top: 20px;
-        }
-        .privacy-content ul {
-            color: var(--main-text);
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .privacy-content p {
-            color: var(--main-text);
-            margin-bottom: 15px;
-        }
-        .summary-box {
-            background: rgba(1, 26, 26, 0.7);
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-        .table-of-contents {
-            background: rgba(1, 26, 26, 0.7);
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-        .table-of-contents ol {
-            padding-left: 20px;
-        }
-        .footer {
-            background: var(--footer-background);
-            padding: 20px;
-            font-size: 14px;
-            font-weight: normal;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .footer p {
-            color: var(--footer-text);
-        }
-        .footer a {
-            color: var(--footer-text);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: normal;
-        }
-        .social-icons {
-            margin-top: 20px;
-        }
-        .social-icons img {
-            width: 30px;
-            margin: 0 10px;
-        }
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: rgba(1, 26, 26, 0.7);
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid var(--primary-color);
-            border-right: 1px solid var(--primary-color);
-        }
-        th {
-            background-color: rgba(1, 34, 34, 0.9);
-            font-weight: normal;
-        }
-        td:last-child, th:last-child {
-            border-right: none;
-        }
-        tr:last-child td {
-            border-bottom: none;
-        }
+    <!-- Tailwind via CDN, shared colors and font in resources/tailwind-config.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="resources/tailwind-config.js"></script>
+
+    <style type="text/tailwindcss">
+        header { @apply px-5 pb-8 pt-28 text-center; }
+        header h1 { @apply bg-gradient-to-r from-accent to-emerald-300 bg-clip-text pb-2 text-4xl font-medium tracking-tight text-transparent sm:text-6xl; }
+        .logo { @apply hidden; }
+        .container { @apply mx-auto max-w-3xl px-5 pb-20; }
+        .privacy-content { @apply text-left; }
+        .privacy-content h2 { @apply mb-3 mt-14 scroll-mt-24 text-2xl font-normal text-accent; }
+        .privacy-content h3 { @apply mb-2 mt-8 text-lg font-medium text-accent; }
+        .privacy-content p { @apply mb-4 leading-7 text-mist; }
+        .privacy-content ul { @apply mb-4 list-disc space-y-2 pl-6 text-mist; }
+        .privacy-content a { @apply text-accent underline-offset-4 hover:underline; }
+        .summary-box, .table-of-contents { @apply mb-10; }
+        .summary-box h2, .table-of-contents h2 { @apply mt-0; }
+        .table-of-contents ol { @apply list-decimal space-y-1 pl-6; }
+        table { @apply my-6 w-full border-collapse text-sm; }
+        th, td { @apply border border-moss/50 p-3 text-left align-top; }
+        th { @apply bg-ink font-normal text-accent; }
+        td { @apply text-mist; }
     </style>
 </head>
-<body>
+<body class="flex min-h-screen flex-col bg-ink font-sans text-accent lowercase antialiased">
+    <script src="resources/nav.js"></script>
+
     <header>
         <a href="index.html">
         <img src="https://firebasestorage.googleapis.com/v0/b/eavesdrop-64397.firebasestorage.app/o/htmlImages%2FlogoNoBackground.png?alt=media&token=499b0899-d4f7-452d-acab-b3b29bf3a99d" alt="eavesdrop Logo" class="logo">
@@ -151,7 +45,7 @@
 
     <div class="container">
         <div class="privacy-content">
-            <p>last updated april 02, 2025</p>
+            <p>last updated october 28, 2026</p>
 
             <p>This Privacy Notice for eavesdrop ('we', 'us', or 'our'), describes how and why we might access, collect, store, use, and/or share ('process') your personal information when you use our services ('Services'), including when you:
 </p>
@@ -204,6 +98,7 @@ Want to learn more about what we do with any information we collect? Review the 
                     <li><a href="#updates">do we make updates to this notice?</a></li>
                     <li><a href="#contact">how can you contact us about this notice?</a></li>
                     <li><a href="#review">how can you review, update, or delete the data we collect from you?</a></li>
+                    <li><a href="#child-safety">child safety</a></li>
                 </ol>
             </div>
 
@@ -590,17 +485,38 @@ We may update this Privacy Notice from time to time. The updated version will be
 
             <h2 id="review">16. how can you review, update, or delete the data we collect from you?</h2>
             <p>Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please fill out and submit a data subject access request.</p>
+
+            <h2 id="child-safety">17. child safety</h2>
+            <p>eavesdrop is committed to creating a safe and enjoyable environment for users to share and discover music. We take the issue of child sexual abuse and exploitation (CSAE) seriously and have implemented measures to detect, prevent, and address any incidents of CSAE on our platform.</p>
+
+            <h3>age restrictions and verification</h3>
+            <p>eavesdrop is intended for users aged 16 and above. Our age verification system ensures that users who are below this age are not permitted to use the platform. We use manual checks to verify that users adhere to this age requirement during sign-up.</p>
+
+            <h3>content moderation and reporting</h3>
+            <p>We strive to maintain a platform free from harmful content. Our moderators actively review user profiles and ensure that all profile pictures comply with our safe-for-work (SFW) policy. However, we currently do not use automated content filtering tools.
+
+Reporting Process: Users can report any suspicious or inappropriate content (including CSAE-related material) through the app. Reports are handled by a dedicated internal team who will investigate and take appropriate action.</p>
+
+            <h3>data handling after an incident</h3>
+            <p>User profile pictures are stored in a protected database, ensuring that they are secure. After any CSAE-related incident is resolved, user data is retained only for the legally required duration and is then permanently deleted.</p>
+
+            <h3>legal compliance</h3>
+            <p>We ensure that users under the age of 16 cannot access our platform. We also comply with other applicable legal requirements related to child safety.</p>
+
+            <h3>external partnerships</h3>
+            <p>At this time, eavesdrop does not partner with external organizations such as NCMEC or Thorn, nor are we currently part of any industry group like the Tech Coalition or Safety by Design programs. However, we are committed to continually evaluating opportunities to collaborate with experts and improve our platform's safety measures.</p>
+
+            <h3>transparency and policy updates</h3>
+            <p>While we do not currently publish periodic transparency reports, we regularly update our community on changes to our policies, including CSAE-related measures. These updates are shared through our app and website to keep users informed of our ongoing commitment to safety.</p>
+
+            <h3>moderator training</h3>
+            <p>Our moderators are trained to handle reports related to CSAE. This ensures that any incidents are managed promptly and appropriately, keeping the platform safe for all users.</p>
+
+            <h3>user education</h3>
+            <p>We are working towards developing educational materials for users, to raise awareness about CSAE issues and the importance of a respectful and safe environment. These resources will be integrated into our app in the future.</p>
         </div>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2025 eavesdrop. all rights reserved.</p>
-        <a href="termsAndConditions.html">terms of service</a> |
-        <a href="privacy.html">privacy policy</a>
-        <div class="social-icons">
-            <a href="https://x.com/team_eavesdrop"><img src="resources/x.png" alt="X"></a>
-            <a href="https://tiktok.com/eavesdrop"><img src="resources/tiktok.png" alt="tikTok"></a>
-        </div>
-    </div>
+    <script src="resources/footer.js"></script>
 </body>
 </html>
