@@ -1,10 +1,7 @@
-/* Shared page background. Include with a plain <script src="resources/background.js"></script> directly after <body>. */
-/* Three large, heavily blurred glows that melt into each other, so there is no visible edge or banding. */
+/* Shared page background. Loaded by resources/nav.js, and directly by pages that have no nav. */
+/* One calm glow at the top, in a cool emerald (not lime, that turned muddy on the dark teal), fading out in many small steps so there is no visible edge or banding. */
+/* Under it, a slow vertical shift from slightly lighter at the top to slightly darker at the bottom. */
 
 document.write(`
-    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
-        <div class="absolute -top-48 left-1/2 h-[34rem] w-[60rem] max-w-none -translate-x-1/2 rounded-full bg-accent/[0.13] blur-[140px]"></div>
-        <div class="absolute -bottom-40 -right-40 h-[32rem] w-[40rem] rounded-full bg-moss/40 blur-[140px]"></div>
-        <div class="absolute -left-48 top-1/3 h-[28rem] w-[30rem] rounded-full bg-accent/[0.06] blur-[140px]"></div>
-    </div>
+    <div class="pointer-events-none fixed inset-0 -z-10" aria-hidden="true" style="background: radial-gradient(ellipse 75% 50% at 50% 0%, rgba(52, 211, 153, 0.10) 0%, rgba(52, 211, 153, 0.075) 18%, rgba(52, 211, 153, 0.05) 36%, rgba(52, 211, 153, 0.028) 54%, rgba(52, 211, 153, 0.01) 74%, rgba(52, 211, 153, 0) 100%), linear-gradient(to bottom, #03302d 0%, #012222 55%, #011a1a 100%);"></div>
 `);

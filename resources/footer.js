@@ -2,7 +2,7 @@
 /* No background block and no border: the footer fades into the page instead of sitting on it like a bar. */
 
 document.write(`
-    <footer class="mt-16 bg-gradient-to-b from-transparent to-deep/60 px-6 pb-12 pt-20 text-center text-sm text-mist">
+    <footer class="mt-16 px-6 pb-12 pt-20 text-center text-sm text-mist">
         <div class="mx-auto flex max-w-md flex-col items-center gap-7">
             <div class="flex items-center justify-center gap-6">
                 <a href="https://x.com/team_eavesdrop" class="transition duration-300 hover:-translate-y-0.5"><img src="resources/x.png" alt="X" class="h-6 w-6 opacity-80 transition hover:opacity-100"></a>
